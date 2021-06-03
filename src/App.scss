@@ -12,13 +12,14 @@ body {
 }
 
 .container {
-  margin: 1em;
+  margin-top: 1em;
   max-width: 900px;
 }
 
 .weekCounter {
   font-size: 4rem;
   display: flex;
+  align-items: flex-end;
 
   span {
     font-size: 14rem;
@@ -48,9 +49,7 @@ body {
 
   span {
     padding: 0 10px;
-    font-size: 3.5rem;
     font-weight: 600;
-    color: #f7cc54;
   }
 }
 
@@ -96,5 +95,47 @@ body {
   img {
     width: 100%;
     opacity: 1;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    max-width: 90vw;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+  .weekCounter,
+  .countdown,
+  .days {
+    font-size: 2rem;
+    span {
+      font-size: 8rem;
+    }
+  }
+  .days {
+    padding-left: 0;
+
+    span {
+      font-weight: 600;
+      font-size: 2rem;
+    }
+  }
+
+  .fruits {
+    width: 100vw;
+    left: 35vw;
+    bottom: -20vw;
+  }
+
+  .ruler {
+    width: 95vw;
+    top: 90vh;
+  }
+
+  .ruler p {
+    display: none;
+  }
+  .baby {
+    display: none;
   }
 }
