@@ -5,11 +5,9 @@ $lightBlue: #76c7cd;
 $lightBlue2: #b9e0e3;
 
 body {
-  // background-image: linear-gradient(to right, #a6c1ee 51%, #fbc2eb 100%);
   font-size: 1rem;
   font-family: "Indie Flower", cursive;
   line-height: 1;
-  // background: #fbe8d8;
   background: rgba(251, 214, 161, 0.8);
 }
 
@@ -52,17 +50,17 @@ body {
     padding: 0 10px;
     font-size: 3.5rem;
     font-weight: 600;
-    color: #00c7d6;
+    color: #f7cc54;
   }
 }
 
 .circle {
   position: fixed;
   z-index: -1;
-  width: 70vw;
-  height: 70vw;
+  width: 80vw;
+  height: 80vw;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.2);
+  background: #ffefd5;
   left: -20vw;
   top: -10vw;
 }
@@ -74,19 +72,25 @@ body {
   height: 80vw;
   width: 80vw;
   left: 50vw;
-  top: 20vh;
+  bottom: -30vw;
+}
+
+.baby {
+  position: fixed;
+  left: 33vw;
+  bottom: 1vh;
+  margin: auto;
 }
 
 .ruler {
   position: fixed;
-  top: 40vh;
+  top: 35vh;
   right: 1vw;
   width: 30vw;
   p {
-    font-size: 2rem;
-    text-align: right;
-    padding-right: 1rem;
+    font-size: 3rem;
     margin: 0;
+    padding-left: 1rem;
   }
 
   img {
