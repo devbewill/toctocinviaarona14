@@ -1,8 +1,8 @@
 import "./App.scss";
-import RulerSVG from "./ruler.svg";
-import { ReactComponent as BabySVG } from "./baby.svg";
-import CountBabyAge from "./CountBabyAge";
-import CountdownTimer from "./CountdownTimer";
+import RulerSVG from "./assets/ruler.svg";
+import { ReactComponent as BabySVG } from "./assets/baby.svg";
+import CountBabyAge from "./components/CountBabyAge";
+import CountdownTimer from "./components/CountdownTimer";
 
 function App() {
   return (
