@@ -1,29 +1,19 @@
 import React, { useState, useEffect } from "react";
 
 const CountBabyAge = () => {
-
   const getBabyAge = () => {
     const timePast = new Date() - new Date(`2021-03-13`);
-
-    let babyAge = {};
-
-    babyAge = {
-      Settimane: Math.ceil(timePast /(1000 * 60 * 60 * 24 * 7)),
-      Giorni: (Math.floor(timePast / (1000 * 60 * 60 * 24))),
-      Hours: Math.floor((timePast / (1000 * 60 * 60)) % 24),
-      Minutes: Math.floor((timePast / 1000 / 60) % 60),
-      Seconds: Math.floor((timePast / 1000) % 60),
-    };
-
+    let babyAge = Math.floor(timePast / (1000 * 60 * 60 * 24 * 7));
     return babyAge;
   };
 
   const [babyAge, setBabyAge] = useState(getBabyAge());
+  const imageUrl = `https://images.agoramedia.com/wte3.0/gcms/wbw-${babyAge}-fruit.png`;
 
   useEffect(() => {
     setTimeout(() => {
       setBabyAge(getBabyAge());
-    }, 5000);
+    }, 50000);
   });
 
   //previsto il 18/12
@@ -34,17 +24,15 @@ const CountBabyAge = () => {
 
   return (
     <>
-      <div className="container">
-
-        {Object.entries(babyAge).map(([unit, value]) => {
-          return (
-            <div key={Math.random().toString(16)} className="counter">
-              <span className="count">{value}</span>
-              <span className="unit">{unit}</span>
-            </div>
-          );
-        })}
+      <div className="weekCounter">
+        <span>{babyAge}</span>
+        <p>settimane sono già passate </p>
       </div>
+
+      <div
+        className="fruits"
+        style={{ backgroundImage: `url(${imageUrl})` }}
+      ></div>
     </>
   );
 };

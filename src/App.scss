@@ -1,18 +1,96 @@
-.container {
-  display: flex;
-  justify-content: center;
-}
-.counter {
-  display: flex;
-  text-align: center;
-  flex-direction: column;
-  width: 15vw;
-  margin: 2em;
+@import url("https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
 
-  .count {
-    font-size: 5em;
+$lightBlue: #76c7cd;
+$lightBlue2: #b9e0e3;
+
+body {
+  // background-image: linear-gradient(to right, #a6c1ee 51%, #fbc2eb 100%);
+  font-size: 1rem;
+  font-family: "Indie Flower", cursive;
+  line-height: 1;
+  // background: #fbe8d8;
+  background: rgba(251, 214, 161, 0.8);
+}
+
+.container {
+  margin: 1em;
+  max-width: 900px;
+}
+
+.weekCounter {
+  font-size: 4rem;
+  display: flex;
+
+  span {
+    font-size: 14rem;
+    padding: 0 2rem;
+  }
+}
+.countdown {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  font-size: 4rem;
+
+  p {
+    text-align: right;
   }
 
-  .unit {
+  span {
+    font-size: 14rem;
+    padding: 0 2rem;
+  }
+}
+
+.days {
+  font-size: 3rem;
+  max-width: 450px;
+  padding-left: 2em;
+
+  span {
+    padding: 0 10px;
+    font-size: 3.5rem;
+    font-weight: 600;
+    color: #00c7d6;
+  }
+}
+
+.circle {
+  position: fixed;
+  z-index: -1;
+  width: 70vw;
+  height: 70vw;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  left: -20vw;
+  top: -10vw;
+}
+
+.fruits {
+  position: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 80vw;
+  width: 80vw;
+  left: 50vw;
+  top: 20vh;
+}
+
+.ruler {
+  position: fixed;
+  top: 40vh;
+  right: 1vw;
+  width: 30vw;
+  p {
+    font-size: 2rem;
+    text-align: right;
+    padding-right: 1rem;
+    margin: 0;
+  }
+
+  img {
+    width: 100%;
+    opacity: 1;
   }
 }
