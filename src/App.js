@@ -1,4 +1,3 @@
-import "./App.scss";
 import RulerSVG from "./assets/ruler.svg";
 import { ReactComponent as BabySVG } from "./assets/baby.svg";
 import CountBabyAge from "./components/CountBabyAge";
@@ -19,7 +18,7 @@ function App() {
         <Born></Born>
 
         {/* <CountBabyAge />
-      <CountdownTimer /> */}
+        <CountdownTimer /> */}
       </div>
     </>
   );
